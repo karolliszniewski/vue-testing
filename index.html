@@ -20,7 +20,8 @@
   </head>
   <body>
     <div id="app">
-      <p v-for="book in books">{{book.title}}</p>
+      <p v-for="book in books">{{book}}</p>
+      <p v-for="author in authors">{{author.name}}</p>
 
       <p>{{title}}</p>
       <p v-if="display">{{age}}</p>

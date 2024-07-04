@@ -7,8 +7,11 @@ const app = Vue.createApp({
           x:0,
           y:0,
           books: [
-            {title:"witcher"},
-            {title:"exodus"}
+            "book1","book2"
+          ],
+          authors: [
+            {name:"King"},
+            {name:"Lord"}
           ],
        };
     },
