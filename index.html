@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <title>Vue test</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: rgb(100, 100, 104);
+        margin: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <p v-for="book in books">{{book.title}}</p>
+
+      <p>{{title}}</p>
+      <p v-if="display">{{age}}</p>
+      <button @:click="sayHi('3')">Hi</button>
+
+      <div class="box" @mouseover="handleEvent">mouseOver</div>
+      <div class="box" @mouseleave="handleLeave">mouseLeave</div>
+      <div class="box" @dblclick="handleDoubleClick">doubleClick</div>
+      <div class="box" @mousemove="mousemove">x:{{x}} and y:{{y}}</div>
+    </div>
+    <footer>
+      <script src="index.js"></script>
+    </footer>
+  </body>
+</html>
