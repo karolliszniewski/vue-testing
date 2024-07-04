@@ -13,6 +13,8 @@ const app = Vue.createApp({
             {name:"King"},
             {name:"Lord"}
           ],
+          url: "https://www.google.co.uk",
+          
        };
     },
     methods:{

@@ -20,6 +20,12 @@
   </head>
   <body>
     <div id="app">
+      <!--Data binding (Value to atributes) -->
+
+      <p>{{url}}</p>
+      <a :href="url">Google co uk</a>
+
+      <!--Loop in vlue-->
       <p v-for="book in books">{{book}}</p>
       <p v-for="author in authors">{{author.name}}</p>
 
