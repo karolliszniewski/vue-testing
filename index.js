@@ -10,8 +10,8 @@ const app = Vue.createApp({
             "book1","book2"
           ],
           authors: [
-            {name:"King"},
-            {name:"Lord"}
+            {name:"King",bool:true},
+            {name:"Lord",bool:false}
           ],
           url: "https://www.google.co.uk",
           
@@ -34,6 +34,9 @@ const app = Vue.createApp({
       mousemove(e){
          this.x = e.clientX;
          this.y = e.clientY
+      },
+      toggleBool(author){
+         author.bool = !author.bool
       }
     }
  });

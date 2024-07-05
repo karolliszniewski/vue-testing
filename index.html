@@ -16,6 +16,16 @@
         justify-content: center;
         color: white;
       }
+
+      .boolClass {
+        background-color: navajowhite;
+      }
+      .par {
+        height: 10rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
     </style>
   </head>
   <body>
@@ -27,7 +37,14 @@
 
       <!--Loop in vlue-->
       <p v-for="book in books">{{book}}</p>
-      <p v-for="author in authors">{{author.name}}</p>
+      <!-- If condition true then add class -->
+      <p
+        v-for="author in authors"
+        @click="toggleBool(author)"
+        :class="{boolClass: author.bool, par : true}"
+      >
+        {{author.name}}
+      </p>
 
       <p>{{title}}</p>
       <p v-if="display">{{age}}</p>
