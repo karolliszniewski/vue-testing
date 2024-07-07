@@ -37,6 +37,13 @@ const app = Vue.createApp({
       },
       toggleBool(author){
          author.bool = !author.bool
+      },
+
+    },
+    computed:{
+      isFavFilter(){
+
+         return this.authors.filter((author)=> author.bool)
       }
     }
  });
